@@ -1,0 +1,50 @@
+import random
+def game():
+    while True:
+    #Select option from below
+      print("1.Rock")
+      print("2.Paper")
+      print("3.Scissors")
+user=input("Enter choice(1/2/3) or 'Q' to quit:").strip().upper()
+
+
+if user == 'Q':
+   breakpoint
+
+if user == '1':
+    user="Rock"
+elif user == '2':
+    user="Paper"
+elif user == '3':
+    user="Scissors"
+else:
+        print("Invalid choice.Please try again.")
+        
+
+possible_choices = ["Rock","Paper","Scissors"]
+computer= random.choice(possible_choices)
+print("\n YOUR CHOICE and COMPUTER CHOICE:\n",user,computer)
+if (user == computer):
+    print("Both the players selected{user}.It's a tie.")
+elif user == "Rock":
+    if computer == "Scissors":
+        print("Rock smashes Scissors! YOU WINS.")
+    else:
+        print("Paper covers Rock! COMPUTER WINS.")
+elif user == "Rock":
+    if computer == "Scissors":
+        print("Paper covers Rock! YOU WINS.")
+    else:
+         print("Scissors cuts Paper! COMPUTER WINS.")
+elif user == "Scissors":
+    if computer == "Paper":
+     print("Scissors cuts Paper! YOU WINS.")
+else:
+    print("Rock smashes Scissors! COMPUTER WINS.")
+
+play_again = input("Play again?(Yes/No):")
+if play_again != 'Yes':
+
+#start the game        
+        game()
+
